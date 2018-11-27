@@ -9,7 +9,7 @@ if (isset($_GET["nom"])) {
     $telefono = $_GET["tel"];
     $email = $_GET["mail"];
     $ip = $_GET["ip"];
-    $isdn = $_GET["isdn"];
+   
 $link = mysqli_connect("localhost", "root", "", "c9");    
     
     
@@ -19,7 +19,7 @@ $link = mysqli_connect("localhost", "root", "", "c9");
         formRegistro();
     }else{
 
-               $query = 'INSERT INTO SALA_REMOTA (nombre, responsable, telefono, email_responsable, ip, isdn) VALUES ("'.$name.'","'.$responsable.'","'.$telefono.'","'.$email.'","'.$ip.'","'.$isdn.'")';
+               $query = 'INSERT INTO SALA_REMOTA (nombre, responsable, telefono, email_responsable, ip, isdn) VALUES ("'.$name.'","'.$responsable.'","'.$telefono.'","'.$email.'","'.$ip.'")';
                 mysqli_query($link,$query) or die(mysqli_error());
                 echo 'La sala '.$name.' ha sido registrada de manera satisfactoria.<br/>';
    header('Location: index.php');
