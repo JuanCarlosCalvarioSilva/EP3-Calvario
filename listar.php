@@ -27,11 +27,10 @@
 <?php //session_start(); 
 require "cfg/conexion.php";
 
-$link = mysqli_connect("localhost", "root", "", "c9");
 
-   $query="select * from SALA_REMOTA";
 
-   $resultado=mysqli_query($link,$query);
+$query="select * from SALA_REMOTA";
+   $resultado=mysqli_query($conexion,$query);
    echo "<div class='container'>";
    echo "<table class='table table-striped'>";
    echo "<th> Nombre de Sala</th> <th>Respondable de Sala</th> <th>Telefono</th> <th>E-Mail</th> <th>IP</th> <th>ISDN</th> <th>Editar</th> <th>Eliminar</th>";
